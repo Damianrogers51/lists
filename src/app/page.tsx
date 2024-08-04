@@ -1,9 +1,12 @@
-import List from "@/components/List";
+import List from "@/components/list/List";
+import { getListItems } from "@/db/queries/listItems";
 
-export default function Home() {
+export default async function Home() {
+  const listItems = await getListItems(); 
+
   return (
-    <main className="relative w-screen h-screen p-8">
-      <List />
+    <main className="relative w-screen h-screen text-neutral-700 p-8">
+      <List listItems={listItems} />
     </main>
   );
 }
