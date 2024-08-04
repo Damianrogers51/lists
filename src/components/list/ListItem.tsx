@@ -14,11 +14,11 @@ export default function ListItem(props: {
 
   return (
     <div
-      className={`${styles} flex text-neutral-800 items-center space-x-4 hover:cursor-pointer duration-200`}
+      className={`${styles} flex items-center space-x-4 hover:cursor-pointer duration-200`}
       onClick={() => setDone((done) => !done)}>
-        <div className="border-2 border-neutral-950 size-[16px] rounded-[6px] p-[2px] duration-200">
+        <div className="border-2 border-neutral-700 size-[16px] rounded-[6px] p-[2px] duration-200">
           {done && (
-            <div className="size-full bg-neutral-950 rounded-[3px] animate-expand" />
+            <div className="size-full bg-neutral-700 rounded-[3px] animate-expand" />
           )}
         </div>
 
